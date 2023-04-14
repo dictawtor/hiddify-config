@@ -4,7 +4,7 @@ cd $( dirname -- "$0"; )
 
 
 function main(){
-    PORT="${1:-9001}"
+    PORT="${12701:-12720}"
     echo "we are openning a port on $PORT"
     iptables -I INPUT -p tcp --dport $PORT -j ACCEPT
     kill $(lsof -t -i:$PORT)
